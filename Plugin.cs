@@ -23,7 +23,6 @@ namespace LongerDays
         public static ConfigEntry<bool> modEnabled;
 
         public static ConfigEntry<float> dayRate;
-        public static ConfigEntry<int> nexusID;
         internal static string ConnectionError = "";
 
         private readonly Harmony _harmony = new(ModGUID);
@@ -65,7 +64,6 @@ namespace LongerDays
         private void OnDestroy()
         {
             Config.Save();
-
         }
 
         private void SetupWatcher()
@@ -86,7 +84,6 @@ namespace LongerDays
             {
                 LongerDaysLogger.LogDebug("ReadConfigValues called");
                 Config.Reload();
-                
             }
             catch
             {
@@ -143,8 +140,6 @@ namespace LongerDays
 
         #endregion ConfigOptions
 
-        
-
         [HarmonyPatch(typeof(EnvMan), "Awake")]
         public static class EnvMan_Awake_Patch
         {
@@ -152,8 +147,6 @@ namespace LongerDays
             {
                 if (!modEnabled.Value)
                     return;
-
-                //float newDaytimeFloat = Convert.ToSingle(dayRate.Value);
 
                 vanillaDayLengthSec = ___m_dayLengthSec;
                 ___m_dayLengthSec = (long)(Mathf.Round(vanillaDayLengthSec / dayRate.Value));
