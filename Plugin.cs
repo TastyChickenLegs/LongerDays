@@ -19,7 +19,9 @@ namespace LongerDays
         private static string ConfigFileName = ModGUID + ".cfg";
         private static string ConfigFileFullPath = Paths.ConfigPath + Path.DirectorySeparatorChar + ConfigFileName;
         private static LongerDaysPlugin context;
+        private static long newVanillaSeconds;
 
+        // public static ConfigEntry<int> startingDays;
         public static ConfigEntry<bool> modEnabled;
 
         public static ConfigEntry<float> dayRate;
@@ -48,11 +50,11 @@ namespace LongerDays
             _ = ConfigSync.AddLockingConfigEntry(_serverConfigLocked);
             context = this;
 
-            modEnabled = Config.Bind<bool>("General", "Enabled", true, "Enable this mod");
+            modEnabled = config("General", "Enabled", true, "Enable this mod");
             dayRate = context.config("General", "DayRate", 0.5f,
                 new ConfigDescription("Speed at which day progresses.  50% is twice as long day.  Restart after changing",
-                new AcceptableValueRange<float>(0.1f, 1f), null, new ConfigurationManagerAttributes { ShowRangeAsPercent = true, DispName = "Day Rate - Restart After Changing" }));
-
+                new AcceptableValueRange<float>(0f, 1f), null, new ConfigurationManagerAttributes { ShowRangeAsPercent = true, DispName = "Day Rate - Restart After Changing" }));
+            //startingDays = context.config("General", "StartingDays", 1, "Starting days");
             if (!modEnabled.Value)
                 return;
 
@@ -143,6 +145,7 @@ namespace LongerDays
         [HarmonyPatch(typeof(EnvMan), "Awake")]
         public static class EnvMan_Awake_Patch
         {
+           
             private static void Postfix(ref long ___m_dayLengthSec)
             {
                 if (!modEnabled.Value)
@@ -150,7 +153,9 @@ namespace LongerDays
 
                 vanillaDayLengthSec = ___m_dayLengthSec;
                 ___m_dayLengthSec = (long)(Mathf.Round(vanillaDayLengthSec / dayRate.Value));
+                newVanillaSeconds = (long)(Mathf.Round(vanillaDayLengthSec / dayRate.Value));
             }
         }
+
     }
 }
