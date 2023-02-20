@@ -1,7 +1,7 @@
 {
   "name": "LongerDays",
-  "description": "Change speed of daytime.  ServerSync Version for Servers.  SpeedRate default 50% or twice as long daytime.",
-  "version_number": "1.0.0",
+  "description": "Change speed of the day.  ServerSync Version for Servers.  SpeedRate default 50% or twice as long days.",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/tastychickenlegs",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.1900"

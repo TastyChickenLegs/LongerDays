@@ -38,9 +38,13 @@ Start the game.
 
 ### Version Information
 
+1.0.1
+
+Updated to fix disconnect issue and version check
 
 
 1.0.0
+
 
 - initial release
 ##	Now for the shameless plug
