@@ -1,10 +1,10 @@
 
 # Longer Days
 
-### Configure speed of DayTime.  Now with ServerSync
+### Configure speed of the Day.  Now with ServerSync
 
 
-- Configure speed of daytime
+- Configure speed of the day
 - run on a server and send configs down to players
 
 [Chat with me on Discord](https://discord.com/users/TastyChickenLegs#4818)
