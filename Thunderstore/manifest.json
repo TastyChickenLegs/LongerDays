@@ -1,0 +1,9 @@
+{
+  "name": "LongerDays",
+  "description": "Change speed of the day.  SpeedRate is by default 50% or twice as long days.",
+  "version_number": "1.0.8",
+  "website_url": "https://github.com/tastychickenlegs",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2101"
+  ]
+}
