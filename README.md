@@ -1,20 +1,24 @@
 
 # Longer Days
 
-### Configure speed of the Day.  Now with ServerSync
+### Configure speed of DayTime.  Now with ServerSync
 
-
-- Configure speed of the day
+- Now works with Multiplayer - player configuration sync has been fixed.
+- Configure speed of daytime
 - run on a server and send configs down to players
 
-[Chat with me on Discord](https://discord.com/users/TastyChickenLegs#4818)
+[Chat with me on Discord](https://discord.gg/z5NrSZqP)
 
 
 
 
 ### Credits:
 
-Aedenthorn for their public repository which taught me to mod and inspired my creations.  Much credit for everything
+- Vapok and the other modders on the Vapok Discord Server 
+- GoldenRevolver - who is an amazing Modder/Programmer and a solid gold human being.  
+
+
+
 
 ![screenshot](https://i.ibb.co/sggcwcq/ldmenu.png)
 
@@ -38,9 +42,55 @@ Start the game.
 
 ### Version Information
 
+1.1.0
+
+- updated for Witch's Bog
+
+
+1.0.9
+
+- Updated for Ashlands
+
+
+1.0.8
+
+- updated for Valheim 0.271.22
+
+1.0.7
+
+- Updated to work with Hildir's Request
+
+
+1.0.6
+
+No changes, updated to with newest Patch Release of Valheim
+
+
+1.0.5
+
+removed the fix for losing days.  This is the original stable codebase that works reliably.
+Updated to work with the newest version of Valheim 0.214.300
+
+
+1.0.4
+
+deprecated version reverted back to stable code base.
+
+
+1.0.3
+
+Updated Readme
+
+1.0.2
+
+- Fixed ServerSync happening too late and config changes not updating dynamically
+- Now updates on all players attached to the server.
+
+
+
 1.0.1
 
-Updated to fix disconnect issue and version check
+- Updated to fix disconnect issue and version check
 
 
 1.0.0
