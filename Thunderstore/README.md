@@ -7,7 +7,7 @@
 - Configure speed of daytime
 - run on a server and send configs down to players
 
-[Chat with me on Discord](https://discord.com/users/TastyChickenLegs#4818)
+[Chat with me on Discord](https://discord.gg/z5NrSZqP)
 
 
 
@@ -41,6 +41,16 @@ Extract DLL from zip file into "<GameDirectory>\Bepinex\plugins"
 Start the game.
 
 ### Version Information
+
+1.1.0
+
+- updated for Witch's Bog
+
+
+1.0.9
+
+- Updated for Ashlands
+
 
 1.0.8
 
